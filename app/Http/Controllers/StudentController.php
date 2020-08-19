@@ -8,4 +8,8 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     //
+	public function students()
+	{
+		echo 22222222222;
+	}
 }
