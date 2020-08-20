@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('getsome', 'TestController@getsome');
+
+Route::namespace('Admin')->group(function () {
+    // 在 「App\Http\Controllers\Admin」 命名空间下的控制器
+	Route::any('admin/getsome', 'AdminController@getsome');
+});
+
+Route::namespace('Api')->group(function(){
+	Route::get('login', 'UsersController@login');
+	Route::post('dologin', 'UsersController@dologin');
+});
+
