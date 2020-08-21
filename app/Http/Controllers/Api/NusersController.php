@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Api\Users;
+use App\Models\Api\Nusers;
 
-class UsersController extends Controller
+class NusersController extends Controller
 {
 	public $tmp_users;
     //

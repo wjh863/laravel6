@@ -15,7 +15,16 @@ class CreateAreaTable extends Migration
     {
         Schema::create('area', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            // $table->timestamps();
+			$table->string('name', 50);
+			$table->string('adcode', 10);
+			$table->string('citycode', 10);
+			$table->string('areaId', 10);
+			$table->string('level', 20);
+			$table->string('parent', 10);
+			
+			$table->index('adcode');
+			$table->index('citycode');
         });
     }
 

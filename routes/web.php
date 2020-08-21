@@ -23,7 +23,15 @@ Route::namespace('Admin')->group(function () {
 });
 
 Route::namespace('Api')->group(function(){
-	Route::get('login', 'UsersController@login');
-	Route::post('dologin', 'UsersController@dologin');
+	Route::get('login', 'NusersController@login');
+	Route::post('dologin', 'NusersController@dologin');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
